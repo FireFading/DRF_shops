@@ -6,3 +6,8 @@ from towns.serializers import TownSerializer
 class TownsListCreateView(generics.ListCreateAPIView):
     queryset = Town.objects.all()
     serializer_class = TownSerializer
+
+
+class TownDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Town.objects.all()
+    serializer_class = TownSerializer

@@ -1,7 +1,7 @@
 from rest_framework import generics
 from rest_framework.response import Response
 from streets.models import Street
-from streets.serializers import StreetSerializer
+from streets.serializers import StreetSerializer, ShowStreetSerializer
 
 
 class StreetsListCreateView(generics.ListCreateAPIView):
@@ -15,3 +15,8 @@ class StreetsListCreateView(generics.ListCreateAPIView):
             queryset = queryset.filter(town__id=town_id)
         serializer = StreetSerializer(queryset, many=True)
         return Response(serializer.data)
+
+
+class StreetDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Street.objects.all()
+    serializer_class = ShowStreetSerializer

@@ -3,6 +3,7 @@
 - get street in specific town
 - create town, shop, street
 - get shops in specific town or/and specific street, close/open shops (all params are optional)
+- get detail about shop/street/town
 > ***
 
 ## setup

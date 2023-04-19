@@ -4,7 +4,7 @@ from django.db.models import Q
 from rest_framework import generics, status
 from rest_framework.response import Response
 from shops.models import Shop
-from shops.serializers import ShopSerializer
+from shops.serializers import ShopSerializer, ShowShopSerializer
 from streets.models import Street
 
 
@@ -44,3 +44,8 @@ class ShopsListCreateView(generics.ListCreateAPIView):
                     )
                 )
         return queryset
+
+
+class ShopDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Shop.objects.all()
+    serializer_class = ShowShopSerializer
