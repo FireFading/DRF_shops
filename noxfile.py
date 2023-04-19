@@ -1,5 +1,4 @@
 import nox
-from dotenv import load_dotenv
 
 
 @nox.session
@@ -30,10 +29,3 @@ def lint(session: nox.Session) -> None:
         "--config-file=configs/.mypy.ini",
         "app"
     )
-
-
-# @nox.session
-# def run_tests(session: nox.Session) -> None:
-#     load_dotenv(dotenv_path="./.env.example")
-#     session.install("-r", "requirements.txt")
-#     session.run("pytest")
