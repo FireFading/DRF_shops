@@ -15,5 +15,9 @@ test:
 
 migrate:
 	docker exec -it django python manage.py makemigrations && docker exec -it django python manage.py migrate
+
 static:
 	docker exec -it django python manage.py collectstatic
+
+shell:
+	docker exec -it django python manage.py shell

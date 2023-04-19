@@ -1,7 +1,7 @@
 from rest_framework import generics
 from rest_framework.response import Response
 from streets.models import Street
-from streets.serializers import StreetSerializer, ShowStreetSerializer
+from streets.serializers import ShowStreetSerializer, StreetSerializer
 
 
 class StreetsListCreateView(generics.ListCreateAPIView):

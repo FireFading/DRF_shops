@@ -1,5 +1,5 @@
 from django.urls import path
-from towns.views import TownsListCreateView, TownDetailView
+from towns.views import TownDetailView, TownsListCreateView
 
 app_name = "towns"
 

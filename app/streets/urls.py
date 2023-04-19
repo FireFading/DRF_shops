@@ -1,5 +1,5 @@
 from django.urls import path
-from streets.views import StreetsListCreateView, StreetDetailView
+from streets.views import StreetDetailView, StreetsListCreateView
 
 app_name = "streets"
 
